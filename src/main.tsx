@@ -19,9 +19,14 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/professor/dashboard" element={<div>Professor Dashboard</div>} />
-        <Route path="/student/dashboard" element={<div>Student Dashboard</div>} />
-        <Route path="*" element={<div>404 Not Found</div>} />
+        <Route
+          path="/professor/dashboard"
+          element={<div>Professor Dashboard</div>}
+        />
+        <Route
+          path="/student/dashboard"
+          element={<div>Student Dashboard</div>}
+        />
       </Routes>
     </BrowserRouter>
   </StrictMode>
