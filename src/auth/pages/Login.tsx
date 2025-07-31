@@ -51,7 +51,7 @@ export const Login = () => {
       isProfessor
         ? navigate("/professor/dashboard")
         : navigate("/student/dashboard");
-    }, 2000);
+    }, 1500);
   };
 
   return (
