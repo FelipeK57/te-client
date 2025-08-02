@@ -3,9 +3,6 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router";
 
-// Pages
-import { App } from "./App.tsx";
-
 // Auth
 import { Login } from "./auth/pages/Login.tsx";
 
