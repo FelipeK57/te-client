@@ -2,4 +2,5 @@
 
 body {
   font-family: 'Inter Variable', sans-serif;
+  @apply bg-zinc-50;
 }

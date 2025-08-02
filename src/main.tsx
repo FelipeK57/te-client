@@ -14,7 +14,6 @@ import { Dashboard } from "./student/pages/Dashboard.tsx";
 
 // Teacher
 
-
 // Supports weights 100-900
 // @ts-ignore
 import "@fontsource-variable/inter";
@@ -23,8 +22,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route
           path="/professor/dashboard"
           element={<div>Professor Dashboard</div>}

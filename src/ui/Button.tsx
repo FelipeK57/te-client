@@ -1,6 +1,6 @@
 interface ButtonProps {
   children: any;
-  onClick: () => void;
+  onClick?: () => void;
   loading?: boolean;
   color?: "primary" | "secondary" | "danger";
   variant?: "solid" | "outline";
@@ -17,7 +17,7 @@ export const Button = ({ children, onClick, loading, color, variant, size }: But
     {
       key: "secondary",
       solid: "bg-zinc-200 text-zinc-900 hover:bg-zinc-300",
-      outline: "border-1 border-zinc-200 text-zinc-900 hover:bg-zinc-200",
+      outline: "border-1 border-zinc-200 text-zinc-900 hover:bg-zinc-100",
     },
     {
       key: "danger",
@@ -29,7 +29,7 @@ export const Button = ({ children, onClick, loading, color, variant, size }: But
   return (
     <button
       disabled={loading}
-      className={`flex gap-2 rounded py-2 px-4 ${size === "sm" ? "text-xs" : size === "lg" ? "text-lg" : "text-sm"} items-center justify-center active:scale-95 cursor-pointer transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
+      className={`flex gap-2 rounded-lg py-2 px-4 ${size === "sm" ? "text-xs" : size === "lg" ? "text-lg" : "text-sm"} items-center justify-center active:scale-95 cursor-pointer transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
         types.find((t => t.key === color))?.[variant || "solid"] || "bg-zinc-900 text-zinc-50 hover:bg-zinc-950"
       }`}
       onClick={onClick}
