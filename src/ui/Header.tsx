@@ -1,8 +1,12 @@
 import { LogOut } from "lucide-react";
-import { Button } from "../../ui/Button";
+import { Button } from "../ui/Button";
 import { useNavigate } from "react-router";
 
-export const Header = () => {
+interface HeaderProps {
+  role: "student" | "professor";
+}
+
+export const Header = ({ role }: HeaderProps) => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -10,12 +14,12 @@ export const Header = () => {
   };
 
   return (
-    <div className="w-full bg-white border-zinc-200 border-b-1 ">
+    <div className="w-full bg-white border-zinc-200 border-b-1">
       <div className="flex w-full max-w-7xl justify-between p-4 mx-auto">
         <div className="flex gap-4 items-center">
           <p className="text-xl lg:text-2xl font-semibold">TeamEval</p>
           <p className="py-1 px-2 text-xs rounded-full bg-zinc-200">
-            Estudiante
+            {role === "student" ? "Estudiante" : "Profesor"}
           </p>
         </div>
         <div className="flex items-center">
