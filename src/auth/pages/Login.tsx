@@ -79,7 +79,7 @@ export const Login = () => {
           ))}
         </div>
       </div>
-      <section className="flex flex-1 flex-col gap-2 w-full max-w-sm m-auto justify-center items-center lg:border-1 border-zinc-200 rounded lg:shadow h-fit px-6 py-12">
+      <section className="flex lg:flex-1 flex-col gap-2 w-full max-w-sm m-auto justify-center items-center lg:border-1 border-zinc-200 rounded-lg shadow h-fit px-6 py-12 bg-white">
         <h2 className="text-2xl font-semibold text-center">Iniciar sesión</h2>
         <p className="text-center text-zinc-500">
           Accede a tu cuenta de TeamEval
@@ -95,7 +95,7 @@ export const Login = () => {
             </label>
             <input
               id="email"
-              className={`text-sm placeholder:text-sm py-2 px-4 border-1 rounded focus:outline-1 focus:outline-zinc-500 ${
+              className={`text-sm placeholder:text-sm py-2 px-4 border-1 rounded-lg focus:outline-1 focus:outline-zinc-500 ${
                 errors.email ? "border-rose-500 border" : "border-zinc-200"
               }`}
               type="email"
@@ -115,7 +115,7 @@ export const Login = () => {
             </label>
             <input
               id="password"
-              className={`text-sm placeholder:text-sm py-2 px-4 border-1 rounded focus:outline-1 focus:outline-zinc-500 ${
+              className={`text-sm placeholder:text-sm py-2 px-4 border-1 rounded-lg focus:outline-1 focus:outline-zinc-500 ${
                 errors.password ? "border-rose-500 border" : "border-zinc-200"
               }`}
               type="password"

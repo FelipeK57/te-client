@@ -1,12 +1,16 @@
-import { Header } from "../components/Header";
+import { Analytics } from "../components/Analitycs";
+import { Header } from "../../ui/Header";
+import { Projects } from "../components/Projects";
 
 export const Dashboard = () => {
   return (
-    <main className="flex flex-col w-full min-h-svh">
-      <Header />
-      <section className="flex flex-1 flex-col p-4 overflow-y-auto">
-        <h1 className="text-2xl font-semibold">Student Dashboard</h1>
-        <p className="mt-2">Welcome to your dashboard!</p>
+    <main className="flex flex-col w-full h-svh overflow-hidden">
+      <Header role="student" />
+      <section className="w-full max-w-7xl mx-auto overflow-y-auto">
+        <div className="flex flex-1 flex-col gap-4 p-4">
+          <Analytics />
+          <Projects />
+        </div>
       </section>
     </main>
   );
