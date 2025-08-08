@@ -3,7 +3,7 @@ import { Button } from "../ui/Button";
 import { useNavigate } from "react-router";
 
 interface HeaderProps {
-  role: "student" | "professor";
+  role: "student" | "teacher";
 }
 
 export const Header = ({ role }: HeaderProps) => {

@@ -5,9 +5,10 @@ interface ButtonProps {
   color?: "primary" | "secondary" | "danger";
   variant?: "solid" | "outline";
   size?: "sm" | "md" | "lg";
+  classNames?: string
 }
 
-export const Button = ({ children, onClick, loading, color, variant, size }: ButtonProps) => {
+export const Button = ({ children, onClick, loading, color, variant, size, classNames }: ButtonProps) => {
   const types = [
     {
       key: "primary",
@@ -31,7 +32,7 @@ export const Button = ({ children, onClick, loading, color, variant, size }: But
       disabled={loading}
       className={`flex gap-2 rounded-lg py-2 px-4 ${size === "sm" ? "text-xs" : size === "lg" ? "text-lg" : "text-sm"} items-center justify-center active:scale-95 cursor-pointer transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
         types.find((t => t.key === color))?.[variant || "solid"] || "bg-zinc-900 text-zinc-50 hover:bg-zinc-950"
-      }`}
+      } ${classNames}`}
       onClick={onClick}
     >
       {loading ? (

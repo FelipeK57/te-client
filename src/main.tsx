@@ -7,9 +7,10 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { Login } from "./auth/pages/Login.tsx";
 
 // Student
-import { Dashboard } from "./student/pages/Dashboard.tsx";
+import { Dashboard as StudentDashboard } from "./student/pages/Dashboard.tsx";
 
 // Teacher
+import { Dashboard as TeacherDashboard } from "./teacher/pages/Dashboard.tsx";
 
 // Supports weights 100-900
 // @ts-ignore
@@ -21,10 +22,10 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<Login />} />
         <Route
-          path="/professor/dashboard"
-          element={<div>Professor Dashboard</div>}
+          path="/teacher/dashboard"
+          element={<TeacherDashboard />}
         />
-        <Route path="/student/dashboard" element={<Dashboard />} />
+        <Route path="/student/dashboard" element={<StudentDashboard />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

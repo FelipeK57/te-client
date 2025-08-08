@@ -49,7 +49,7 @@ export const Login = () => {
       setIsLoading(false);
       console.log("Login data:", data);
       isProfessor
-        ? navigate("/professor/dashboard")
+        ? navigate("/teacher/dashboard")
         : navigate("/student/dashboard");
     }, 1500);
   };
